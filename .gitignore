@@ -1,0 +1,9 @@
+# Build files
+echo
+
+# Editor configuration files
+.vscode
+.idea
+
+# Testing files
+file.txt
