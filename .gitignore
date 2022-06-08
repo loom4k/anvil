@@ -1,5 +1,5 @@
 # Build files
-echo
+loom
 
 # Editor configuration files
 .vscode
