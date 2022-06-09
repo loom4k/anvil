@@ -1,2 +1,2 @@
-text: loom.c
-	$(CC) loom.c -o loom -Wall -Wextra -pedantic -std=c99
+text: anvil.c
+	$(CC) anvil.c -o anvil -Wall -Wextra -pedantic -std=c99

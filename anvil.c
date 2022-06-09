@@ -16,8 +16,8 @@
 #include <unistd.h>
 
 /*** defines ***/
-#define LOOM_VERSION "0.0.1"
-#define LOOM_TAB_STOP 8
+#define ANVIL_VERSION "0.0.1"
+#define ANVIL_TAB_STOP 8
 #define CTRL_KEY(k) ((k) & 0x1f)
 
 enum editorKey {
@@ -172,7 +172,7 @@ int editorRowCxToRx(erow *row, int cx) {
     int j;
     for(j = 0; j < cx; j++) {
         if(row->chars[j] == '\t')
-            rx += (LOOM_TAB_STOP - 1) - (rx % LOOM_TAB_STOP);
+            rx += (ANVIL_TAB_STOP - 1) - (rx % ANVIL_TAB_STOP);
         rx++;
     }
 
@@ -186,13 +186,13 @@ void editorUpdateRow(erow *row) {
         if(row->chars[j] == '\t') tabs++;
 
     free(row->render);
-    row->render = malloc(row->size + tabs*(LOOM_TAB_STOP - 1) + 1);
+    row->render = malloc(row->size + tabs*(ANVIL_TAB_STOP - 1) + 1);
 
     int idx = 0;
     for(j = 0; j < row->size; j++) {
         if(row->chars[j] == '\t') {
             row->render[idx++] = ' ';
-            while(idx % LOOM_TAB_STOP != 0) row->render[idx++] = ' ';
+            while(idx % ANVIL_TAB_STOP != 0) row->render[idx++] = ' ';
         } else {
             row->render[idx++] = row->chars[j];
         }
@@ -290,7 +290,7 @@ void editorDrawRows(struct abuf *ab) {
                 // Display welcome message at third of the screen
                 char welcome[80];
                 int welcomelen = snprintf(welcome, sizeof(welcome),
-                    "Loom Editor -- version %s", LOOM_VERSION);
+                    "ANVIL Editor -- version %s", ANVIL_VERSION);
                 if(welcomelen > E.screenCols) welcomelen = E.screenCols;
 
                 // Divide width by 2 and subtract string length
