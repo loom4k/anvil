@@ -1,17 +1,17 @@
-If you find a bug or want to discuss the best way to add a new feature, please open an [issue](https://github.com/loom4k/loom/issues).
+If you find a bug or want to discuss the best way to add a new feature, please open an [issue](https://github.com/loom4k/anvil/issues).
 
-## What is loom? ##
-Loom (usually written without capital letters) is a UNIX code editor written entirely in C.
+## What is Anvil? ##
+Anvil is a UNIX code editor written entirely in C.
 
 This code editor is fast and easy to use. It's great for editing files and programs
 on any machine running UNIX. It could be your new server, your computer, or even 
-your Raspberry Pi! All shortcuts and commands are very easy to learn. Loom doesn't 
+your Raspberry Pi! All shortcuts and commands are very easy to learn. Anvil doesn't 
 use commands like `:wq` lik you could see in Vim but instead `Ctrl-Key` commands. 
 This way, users who already have experience and knowledge of shortcuts used in 
 VSC, Jetbrains IDEs, or Sublime Text, should feel at home and the learning curve 
 shouldn't be too steep!
 
-As of right now, loom as only been tested on UNIX systems (MacOS & Ubuntu)
+As of right now, Anvil as only been tested on UNIX systems (MacOS & Ubuntu)
 
 ## Running ##
 This section of the README will be filled later.
